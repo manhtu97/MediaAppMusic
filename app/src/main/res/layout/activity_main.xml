@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_music"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:layout_above="@+id/sbProgress"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/tvEnd"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_alignTop="@+id/tvBegin" />
+    <TextView
+        android:id="@+id/tvBegin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/sbProgress"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <SeekBar
+        android:id="@+id/sbProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_above="@+id/imgPre"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:text="Tên bài hát"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/backward"
+        android:id="@+id/imgPre"
+        android:layout_alignTop="@+id/imgPlay"
+        android:layout_alignLeft="@+id/textViewTitle"
+        android:layout_alignStart="@+id/textViewTitle"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/play"
+        android:layout_marginBottom="13dp"
+        android:id="@+id/imgPlay"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imgStop"
+        android:layout_toStartOf="@+id/imgStop" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/stop"
+        android:id="@+id/imgStop"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_alignTop="@+id/imgPlay"
+        android:layout_toLeftOf="@+id/imgNext"
+        android:layout_toStartOf="@+id/imgNext" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/next"
+        android:id="@+id/imgNext"
+        android:layout_alignTop="@+id/imgStop"
+        android:layout_alignRight="@+id/textViewTitle"
+        android:layout_alignEnd="@+id/textViewTitle" />
+
+    <ImageView
+        android:id="@+id/imgdisc"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/compact_disc"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

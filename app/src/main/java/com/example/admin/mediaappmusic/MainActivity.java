@@ -1,6 +1,5 @@
 package com.example.admin.mediaappmusic;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         AnhXa();
         AddSong();
         KhoiTaoMedia();
-        final Intent intent = new Intent(MainActivity.this,PlaySongService.class);
+        //final Intent intent = new Intent(MainActivity.this,PlaySongService.class);
         ibPre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 mediaplayer.release(); // giải phóng tài nguyên gắn với đối tượng media
                 ibPlay.setImageResource(R.drawable.play);
                 KhoiTaoMedia();
-                stopService(intent);
+                //stopService(intent);
             }
         });
         ibPlay.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 SetTimeTotal();
                 UpdateTimeSong();
                 imgDisc.startAnimation(animation);
-                startService(intent);
+                //startService(intent);
             }
         });
 
